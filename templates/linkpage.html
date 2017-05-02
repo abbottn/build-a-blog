@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <div class="entry">
+            <div class="subject">
+                <!--a href="/blog/{{ post.key().id() }}"-->
+                {{post.subject}}<!--/a--></div>
+            <pre class="content">{{post.content}}</pre>
+        </div>
+
+{% endblock %}

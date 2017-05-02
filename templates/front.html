@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <title>LC101 Build-a-blog</title>
+  </head>
+
+  <body>
+      <h1>LC101 Build-a-blog</h1>
+
+      <form method="post">
+          <label>
+              <div>new post<div>
+                  <input type="text" name="subject" value="{{subject}}">
+          </label>
+          <label>
+              <div>blog</div>
+              <textarea name="content">{{content}}</textarea>
+
+          </label>
+
+          <div class="error">{{error}}</div>
+
+          <input type="submit">
+      </form>
+
+
+
+      {% for p in posts %}
+        <div class="entry">
+            <div class="p.subject">{{p.subject}}</div>
+            <pre class="p.content">{{p.content}}</pre>
+        </div>
+      {% endfor %}
+
+  </body>
+</html>
